@@ -12,7 +12,7 @@ It links to my projects, courses, and personal notes along the way.
 
 1. [ITI | ML Intro](https://github.com/0xmennatullah/iTi.git)
 2. [ML Specialization | Andrew Ng](https://coursera.org/share/47ae73d67c4ac4acea577a5528e7765c)
-3. [ML Implementations](https://github.com/0xmennatullah/ML-Implementation.git) ![status](https://img.shields.io/badge/Status-Ongoing-blue)  
+3. [ML Implementations](https://github.com/0xmennatullah/ML-Implementation.git)  
 4. Hands-On ML with Scikit-Learn & TensorFlow ![status](https://img.shields.io/badge/Status-Ongoing-blue)   [📖 PDF](https://github.com/yanshengjia/ml-road/blob/master/resources/Hands%20On%20Machine%20Learning%20with%20Scikit%20Learn%20and%20TensorFlow.pdf)  
    - [YT Walkthrough](https://youtu.be/feKKCXHjzfo?si=VRRLrptCpuqJxksl)
    - good walkthrough loss function concept. 
@@ -59,6 +59,8 @@ It links to my projects, courses, and personal notes along the way.
 - **Aug 2025** → ML implementations
 - **Sep 2025** → Completed ITI ML Intro 
 - **Sep 2025** → Hands on ML Book
+- **Oct 2025** → AIMA Book + Gemini API
+- **Nov 2025** → DEPI Gen AI
 
  
 
