@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +10,7 @@
     .hero-bg { background: linear-gradient(135deg, #1e2937, #0f172a); }
     .card-hover { transition: all 0.3s; }
     .card-hover:hover { transform: translateY(-10px); box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1); }
+    section { scroll-margin-top: 80px; } /* fixes fixed navbar overlap */
   </style>
 </head>
 <body class="bg-slate-950 text-white font-sans">
@@ -18,12 +19,12 @@
   <nav class="fixed top-0 w-full bg-slate-900/80 backdrop-blur-md z-50">
     <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
       <h1 class="text-2xl font-bold text-emerald-400">0xMennatullah</h1>
-      <div class="space-x-8">
-        <a href="#about" class="hover:text-emerald-400">About</a>
-        <a href="#projects" class="hover:text-emerald-400">Projects</a>
-        <a href="#journey" class="hover:text-emerald-400">My AI Journey</a>
-        <a href="#experience" class="hover:text-emerald-400">Experience</a>
-        <a href="#skills" class="hover:text-emerald-400">Skills</a>
+      <div class="space-x-8 text-lg">
+        <a href="#about" class="hover:text-emerald-400 transition">About</a>
+        <a href="#projects" class="hover:text-emerald-400 transition">Projects</a>
+        <a href="#journey" class="hover:text-emerald-400 transition">My AI Journey</a>
+        <a href="#experience" class="hover:text-emerald-400 transition">Experience</a>
+        <a href="#skills" class="hover:text-emerald-400 transition">Skills</a>
       </div>
     </div>
   </nav>
@@ -60,28 +61,19 @@
     <div class="max-w-6xl mx-auto px-6">
       <h2 class="text-4xl font-bold mb-12 text-center">Featured Projects</h2>
       <div class="grid md:grid-cols-2 gap-8">
-
         <!-- AINAI -->
         <div class="bg-slate-800 p-8 rounded-3xl card-hover">
-          <div class="flex justify-between items-start">
-            <div>
-              <h3 class="text-2xl font-semibold">AINAI – MENA Fashion Virtual Try-On</h3>
-              <p class="text-emerald-400 mt-1">Graduation Project • Oct 2025 – Present</p>
-            </div>
-          </div>
-          <p class="mt-6 text-slate-300">E-commerce platform for MENA brands with culturally adapted virtual try-on. Fine-tuned CatVTON (lightweight VTON) using LoRA on custom MENA dataset → reduced representation bias across garments, skin tones & body shapes. Containerized with Docker for production deployment.</p>
+          <h3 class="text-2xl font-semibold">AINAI – MENA Fashion Virtual Try-On</h3>
+          <p class="text-emerald-400 mt-1">Graduation Project • Oct 2025 – Present</p>
+          <p class="mt-6 text-slate-300">E-commerce platform for MENA brands with culturally adapted virtual try-on. Fine-tuned CatVTON using LoRA on custom MENA dataset. Reduced bias across garments, skin tones & body shapes. Dockerized for production.</p>
           <a href="https://github.com/0xmennatullah" target="_blank" class="inline-block mt-8 text-emerald-400 hover:underline">View on GitHub →</a>
         </div>
 
-        <!-- QLoRA OPT-125M -->
+        <!-- QLoRA -->
         <div class="bg-slate-800 p-8 rounded-3xl card-hover">
-          <div class="flex justify-between items-start">
-            <div>
-              <h3 class="text-2xl font-semibold">QLoRA Fine-Tuning of OPT-125M</h3>
-              <p class="text-emerald-400 mt-1">DEPI Generative AI Track • 2025</p>
-            </div>
-          </div>
-          <p class="mt-6 text-slate-300">Fine-tuned Facebook OPT-125M on Dolly-15k subset (2,280 samples) using 4-bit NF4 quantization + LoRA (only 0.18% trainable params). Achieved validation perplexity ≈13. Deployed interactive Gradio demo with temperature/max-token controls.</p>
+          <h3 class="text-2xl font-semibold">QLoRA Fine-Tuning of OPT-125M</h3>
+          <p class="text-emerald-400 mt-1">DEPI Generative AI Track • 2025</p>
+          <p class="mt-6 text-slate-300">Fine-tuned OPT-125M on Dolly-15k (2,280 samples) with 4-bit NF4 + LoRA (0.18% params). Achieved perplexity ≈13. Full Gradio demo deployed.</p>
           <a href="https://github.com/0xmennatullah/AI-progress-log" target="_blank" class="inline-block mt-8 text-emerald-400 hover:underline">View Repo →</a>
         </div>
 
@@ -89,7 +81,7 @@
         <div class="bg-slate-800 p-8 rounded-3xl card-hover md:col-span-2 lg:col-span-1">
           <h3 class="text-2xl font-semibold">Image Captioning Transformer Benchmark</h3>
           <p class="text-emerald-400 mt-1">DEPI Project • 2025</p>
-          <p class="mt-6 text-slate-300">Compared RNN, LSTM, and Transformer (ResNet50 backbone) on Flickr8k (1k subset). Transformer achieved 73.11% validation accuracy in only 5 epochs — proving attention superiority in seq2seq with limited data.</p>
+          <p class="mt-6 text-slate-300">Benchmarked Transformer (ResNet50) vs RNN/LSTM on Flickr8k. Achieved 73.11% accuracy in 5 epochs.</p>
           <a href="https://github.com/0xmennatullah/AI-progress-log" target="_blank" class="inline-block mt-8 text-emerald-400 hover:underline">View Repo →</a>
         </div>
       </div>
@@ -99,27 +91,26 @@
   <!-- EXPERIENCE -->
   <section id="experience" class="max-w-6xl mx-auto px-6 py-24">
     <h2 class="text-4xl font-bold mb-12">Experience</h2>
-    
     <div class="space-y-12">
       <div class="grid md:grid-cols-3 gap-8">
         <div>
-          <p class="text-emerald-400 font-medium">Nov 2024 – Present</p>
+          <p class="text-emerald-400">Nov 2024 – Present</p>
           <h3 class="text-xl font-semibold mt-2">Team Lead – Generative AI Professional Track</h3>
           <p class="text-slate-400">Digital Egypt Pioneers Initiative (DEPI)</p>
         </div>
-        <div class="md:col-span-2">
-          <p class="text-slate-300">Elected Team Lead in 6-month program. Leading projects on Agentic AI, generative models (Image & Text), Vision Transformers, NLP, and RAG systems.</p>
+        <div class="md:col-span-2 text-slate-300">
+          Elected Team Lead in 6-month program. Focusing on Agentic AI, generative models, Vision Transformers, NLP, and RAG systems.
         </div>
       </div>
 
       <div class="grid md:grid-cols-3 gap-8">
         <div>
-          <p class="text-emerald-400 font-medium">Aug 2024 – Sep 2024</p>
+          <p class="text-emerald-400">Aug 2024 – Sep 2024</p>
           <h3 class="text-xl font-semibold mt-2">AI Trainee</h3>
           <p class="text-slate-400">Information Technology Institute (ITI)</p>
         </div>
-        <div class="md:col-span-2">
-          <p class="text-slate-300">Completed intensive training in AI/ML/DL fundamentals and Computer Vision. Earned NVIDIA DLI and Kaggle certificates.</p>
+        <div class="md:col-span-2 text-slate-300">
+          Completed training in AI/ML/DL fundamentals and Computer Vision. Earned NVIDIA & Kaggle certificates.
         </div>
       </div>
     </div>
@@ -130,13 +121,12 @@
     <div class="max-w-6xl mx-auto px-6">
       <h2 class="text-4xl font-bold mb-12 text-center">Technical Skills</h2>
       <div class="flex flex-wrap gap-4 justify-center">
-        <span class="bg-slate-800 px-6 py-3 rounded-2xl text-emerald-400">QLoRA / PEFT / LoRA</span>
-        <span class="bg-slate-800 px-6 py-3 rounded-2xl text-emerald-400">CatVTON • Diffusion Models</span>
+        <span class="bg-slate-800 px-6 py-3 rounded-2xl text-emerald-400">QLoRA / PEFT</span>
+        <span class="bg-slate-800 px-6 py-3 rounded-2xl text-emerald-400">CatVTON • Diffusion</span>
         <span class="bg-slate-800 px-6 py-3 rounded-2xl text-emerald-400">PyTorch • Hugging Face</span>
         <span class="bg-slate-800 px-6 py-3 rounded-2xl text-emerald-400">Docker • Gradio</span>
         <span class="bg-slate-800 px-6 py-3 rounded-2xl text-emerald-400">Vision Transformers</span>
         <span class="bg-slate-800 px-6 py-3 rounded-2xl text-emerald-400">MENA Bias Mitigation</span>
-        <span class="bg-slate-800 px-6 py-3 rounded-2xl text-emerald-400">LLM Fine-Tuning</span>
       </div>
     </div>
   </section>
@@ -146,15 +136,12 @@
     <div class="max-w-6xl mx-auto px-6 text-center">
       <h2 class="text-4xl font-bold mb-6">My AI Journey</h2>
       <p class="text-slate-300 max-w-2xl mx-auto">From zero to building production-ready generative AI models. Full timeline, certifications, and every step I took.</p>
-      <a href="https://github.com/0xmennatullah/AI-progress-log/blob/main/README.md" target="_blank"
-         class="inline-block mt-8 bg-emerald-400 text-black px-10 py-4 rounded-2xl font-bold text-lg hover:bg-white">
-        Read the Full Journey Log →
-      </a>
+      <a href="https://github.com/0xmennatullah/AI-progress-log/blob/main/README.md" target="_blank" class="inline-block mt-8 bg-emerald-400 text-black px-10 py-4 rounded-2xl font-bold text-lg hover:bg-white">Read the Full Journey Log →</a>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-black py-12 text-center text-slate-400">
+  <footer class="bg-black py-12 text-center">
     <p>Made with ❤️ in Cairo • 2026</p>
   </footer>
 
