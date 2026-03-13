@@ -23,6 +23,7 @@
         <a href="#projects" class="hover:text-emerald-400">Projects</a>
         <a href="#journey" class="hover:text-emerald-400">My AI Journey</a>
         <a href="#experience" class="hover:text-emerald-400">Experience</a>
+        <a href="#skills" class="hover:text-emerald-400">Skills</a>
       </div>
     </div>
   </nav>
@@ -34,14 +35,14 @@
         <h2 class="text-6xl font-bold leading-tight">Mennatullah Khaled Ebrahim</h2>
         <p class="text-3xl text-emerald-400 mt-4">Generative AI Engineer</p>
         <p class="text-xl text-slate-300 mt-6 max-w-lg">Specialized in culturally adaptive models for the MENA region. Currently fine-tuning CatVTON & LLMs with QLoRA/PEFT for bias mitigation in fashion.</p>
-        
+       
         <div class="mt-10 flex gap-4">
           <a href="https://github.com/0xmennatullah" target="_blank" class="bg-white text-black px-8 py-4 rounded-xl font-semibold flex items-center gap-2 hover:bg-emerald-400">GitHub</a>
           <a href="https://linkedin.com/in/menatullah-khaled" target="_blank" class="border border-white px-8 py-4 rounded-xl font-semibold">LinkedIn</a>
           <a href="Mennatullah_AI_Eng.pdf" download class="border border-emerald-400 text-emerald-400 px-8 py-4 rounded-xl font-semibold">Download CV</a>
         </div>
       </div>
-      
+     
       <div class="flex justify-center">
         <img src="profile.jpg" alt="Mennatullah" class="w-80 h-80 rounded-3xl object-cover border-8 border-emerald-400 shadow-2xl">
       </div>
@@ -54,22 +55,111 @@
     <p class="text-lg text-slate-300 max-w-3xl">Generative AI Engineer leading the AINAI graduation project — a culturally adapted virtual try-on system for MENA fashion that reduces bias in garments, skin tones, and body shapes.</p>
   </section>
 
-  <!-- PROJECTS (same as before) -->
-  <!-- ... (keep the projects section exactly as I gave you earlier) ... -->
+  <!-- PROJECTS -->
+  <section id="projects" class="bg-slate-900 py-24">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-4xl font-bold mb-12 text-center">Featured Projects</h2>
+      <div class="grid md:grid-cols-2 gap-8">
 
-  <!-- MY AI JOURNEY (NEW SECTION) -->
-  <section id="journey" class="bg-slate-900 py-24">
+        <!-- AINAI -->
+        <div class="bg-slate-800 p-8 rounded-3xl card-hover">
+          <div class="flex justify-between items-start">
+            <div>
+              <h3 class="text-2xl font-semibold">AINAI – MENA Fashion Virtual Try-On</h3>
+              <p class="text-emerald-400 mt-1">Graduation Project • Oct 2025 – Present</p>
+            </div>
+          </div>
+          <p class="mt-6 text-slate-300">E-commerce platform for MENA brands with culturally adapted virtual try-on. Fine-tuned CatVTON (lightweight VTON) using LoRA on custom MENA dataset → reduced representation bias across garments, skin tones & body shapes. Containerized with Docker for production deployment.</p>
+          <a href="https://github.com/0xmennatullah" target="_blank" class="inline-block mt-8 text-emerald-400 hover:underline">View on GitHub →</a>
+        </div>
+
+        <!-- QLoRA OPT-125M -->
+        <div class="bg-slate-800 p-8 rounded-3xl card-hover">
+          <div class="flex justify-between items-start">
+            <div>
+              <h3 class="text-2xl font-semibold">QLoRA Fine-Tuning of OPT-125M</h3>
+              <p class="text-emerald-400 mt-1">DEPI Generative AI Track • 2025</p>
+            </div>
+          </div>
+          <p class="mt-6 text-slate-300">Fine-tuned Facebook OPT-125M on Dolly-15k subset (2,280 samples) using 4-bit NF4 quantization + LoRA (only 0.18% trainable params). Achieved validation perplexity ≈13. Deployed interactive Gradio demo with temperature/max-token controls.</p>
+          <a href="https://github.com/0xmennatullah/AI-progress-log" target="_blank" class="inline-block mt-8 text-emerald-400 hover:underline">View Repo →</a>
+        </div>
+
+        <!-- Image Captioning -->
+        <div class="bg-slate-800 p-8 rounded-3xl card-hover md:col-span-2 lg:col-span-1">
+          <h3 class="text-2xl font-semibold">Image Captioning Transformer Benchmark</h3>
+          <p class="text-emerald-400 mt-1">DEPI Project • 2025</p>
+          <p class="mt-6 text-slate-300">Compared RNN, LSTM, and Transformer (ResNet50 backbone) on Flickr8k (1k subset). Transformer achieved 73.11% validation accuracy in only 5 epochs — proving attention superiority in seq2seq with limited data.</p>
+          <a href="https://github.com/0xmennatullah/AI-progress-log" target="_blank" class="inline-block mt-8 text-emerald-400 hover:underline">View Repo →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="max-w-6xl mx-auto px-6 py-24">
+    <h2 class="text-4xl font-bold mb-12">Experience</h2>
+    
+    <div class="space-y-12">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div>
+          <p class="text-emerald-400 font-medium">Nov 2024 – Present</p>
+          <h3 class="text-xl font-semibold mt-2">Team Lead – Generative AI Professional Track</h3>
+          <p class="text-slate-400">Digital Egypt Pioneers Initiative (DEPI)</p>
+        </div>
+        <div class="md:col-span-2">
+          <p class="text-slate-300">Elected Team Lead in 6-month program. Leading projects on Agentic AI, generative models (Image & Text), Vision Transformers, NLP, and RAG systems.</p>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div>
+          <p class="text-emerald-400 font-medium">Aug 2024 – Sep 2024</p>
+          <h3 class="text-xl font-semibold mt-2">AI Trainee</h3>
+          <p class="text-slate-400">Information Technology Institute (ITI)</p>
+        </div>
+        <div class="md:col-span-2">
+          <p class="text-slate-300">Completed intensive training in AI/ML/DL fundamentals and Computer Vision. Earned NVIDIA DLI and Kaggle certificates.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="bg-slate-900 py-24">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-4xl font-bold mb-12 text-center">Technical Skills</h2>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <span class="bg-slate-800 px-6 py-3 rounded-2xl text-emerald-400">QLoRA / PEFT / LoRA</span>
+        <span class="bg-slate-800 px-6 py-3 rounded-2xl text-emerald-400">CatVTON • Diffusion Models</span>
+        <span class="bg-slate-800 px-6 py-3 rounded-2xl text-emerald-400">PyTorch • Hugging Face</span>
+        <span class="bg-slate-800 px-6 py-3 rounded-2xl text-emerald-400">Docker • Gradio</span>
+        <span class="bg-slate-800 px-6 py-3 rounded-2xl text-emerald-400">Vision Transformers</span>
+        <span class="bg-slate-800 px-6 py-3 rounded-2xl text-emerald-400">MENA Bias Mitigation</span>
+        <span class="bg-slate-800 px-6 py-3 rounded-2xl text-emerald-400">LLM Fine-Tuning</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- MY AI JOURNEY -->
+  <section id="journey" class="py-24">
     <div class="max-w-6xl mx-auto px-6 text-center">
       <h2 class="text-4xl font-bold mb-6">My AI Journey</h2>
       <p class="text-slate-300 max-w-2xl mx-auto">From zero to building production-ready generative AI models. Full timeline, certifications, and every step I took.</p>
-      <a href="https://github.com/0xmennatullah/AI-progress-log/blob/main/README.md" target="_blank" 
+      <a href="https://github.com/0xmennatullah/AI-progress-log/blob/main/README.md" target="_blank"
          class="inline-block mt-8 bg-emerald-400 text-black px-10 py-4 rounded-2xl font-bold text-lg hover:bg-white">
         Read the Full Journey Log →
       </a>
     </div>
   </section>
 
-  <!-- EXPERIENCE & SKILLS (same as before) -->
+  <!-- FOOTER -->
+  <footer class="bg-black py-12 text-center text-slate-400">
+    <p>Made with ❤️ in Cairo • 2026</p>
+  </footer>
 
+  <script>
+    tailwind.config = { content: ["*"] }
+  </script>
 </body>
 </html>
